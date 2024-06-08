@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static\style.css">
+    <title>Editar Produto</title>
+  </head>
+  <body>
+    <h1>Editar Produto</h1>
+    <form method="post">
+      Nome: <input type="text" name="nome" value="{{ row.Nome }}"><br>
+      Produto: <input type="text" name="produto" value="{{ row.Produto }}"><br>
+      Quantidade: <input type="number" name="quantidade" value="{{ row.Quantidade }}"><br>
+      Preço: <input type="number" name="preco" step="0.01" value="{{ row.Preço }}"><br>
+      <input type="submit" value="Salvar">
+    </form>
+    <a href="templates\index.html">Voltar</a>
+    <script src="app.py"></script>
+  </body>
+</html>

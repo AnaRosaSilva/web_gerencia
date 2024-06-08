@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link CSS -->
+    <link rel="stylesheet" href="static\style.css">
+    <title>Gerenciamento de Loja</title>
+  </head>
+  <body>
+    <h1>Gerenciamento de Loja</h1>
+    <a href="templates\add.html" class="btn animate-btn">Adicionar Novo Produto</a>
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Preço</th>
+        <th>Ações</th>
+      </tr>
+      {% for row in data %}
+      <tr>
+        <td>{{ row.Nome }}</td>
+        <td>{{ row.Produto }}</td>
+        <td>{{ row.Quantidade }}</td>
+        <td>{{ row.Preço }}</td>
+        <td>
+          <a href="templates\edit.html" class="btn animate-btn">Editar</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <script src="app.py"></script>
+  </body>
+</html>
